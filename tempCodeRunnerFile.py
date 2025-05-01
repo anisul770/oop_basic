@@ -1,0 +1,1 @@
+anis.enroll_student(1)
