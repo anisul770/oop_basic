@@ -37,26 +37,26 @@ class Student(StudentDatabase):
             print('There has No Student.')
         else:
             for student in self.student_list:
-                print(f'{student.__id,student.__name,student.__department,student.__is_enrolled}')
+                print(f'ID: {student.__id}, Name: {student.__name}, Department: {student.__department}, Enrolled: {student.__is_enrolled}')
         
 
-# anis = Student('Anis','science')
-# anis.add_student()
-# fahim = Student('Fahim','science')
-# fahim.add_student()
+anis = Student('Anis','science')
+anis.add_student()
+fahim = Student('Fahim','science')
+fahim.add_student()
 
 while True:
+    print('---------Student Management Menu------------')
     print('1. View All Students\n2. Enroll Student\n3. Drop Student\n4. Exit')
-    num = int(input())
+    num = int(input('Enter Your choice: '))
     if num == 1:
         Student.view_student_info()
     elif num == 2:
-        print('Give id: ',end='')
-        id = int(input())
+        id = int(input('Give ID: '))
         Student.enroll_student(id)
     elif num==3:
-        print('Give id: ',end='')
-        id = int(input())
+        id = int(input('Give ID: '))
         Student.drop_student(id)
     elif num==4 or num > 4 or num <1:
         break
+    print()
